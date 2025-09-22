@@ -6,13 +6,15 @@ public class ej1 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Escribe 1 o 2: ");
-        int num = teclado.nextInt();
+        System.out.println("Escribe un numero de dos cifras: ");
 
-        if (num == 1) {
-            System.out.print("Hola");
-        } else {
-            System.out.print("Adios");
-        }
+        byte num1 = teclado.nextByte();
+
+        System.out.println("Escribe un numero de dos cifras: ");
+        byte num2 = teclado.nextByte();
+
+        System.out.println("La suma es: " + (byte) (num1 + num2));
+
+
     }
 }
