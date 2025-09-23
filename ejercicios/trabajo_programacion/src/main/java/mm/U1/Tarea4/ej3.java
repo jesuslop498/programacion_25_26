@@ -16,7 +16,7 @@ public class ej3 {
         System.out.println("Introduce un numero entero: ");
         short num3 = teclado.nextShort();
 
-        short media = (short) (num1+num2+num3);
-        System.out.println("La media es: " + media/3);
+        short media = (short) (num1 + num2 + num3);
+        System.out.println("La media es: " + media / 3);
     }
 }
