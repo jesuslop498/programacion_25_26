@@ -13,7 +13,7 @@ public class ej2 {
         System.out.println("Introduce un numero entero: ");
         int num2 = teclado.nextInt();
 
-        int media = (num1+num2)/2;
+        int media = (num1 + num2) / 2;
         System.out.println("La media es: " + media);
     }
 }

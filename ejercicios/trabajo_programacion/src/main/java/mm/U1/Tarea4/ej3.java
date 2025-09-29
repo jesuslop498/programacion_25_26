@@ -8,15 +8,15 @@ public class ej3 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Introduce un numero entero: ");
-        short num1 = teclado.nextShort();
+        float num1 = teclado.nextFloat();
 
         System.out.println("Introduce un numero entero: ");
-        short num2 = teclado.nextShort();
+        float num2 = teclado.nextFloat();
 
         System.out.println("Introduce un numero entero: ");
-        short num3 = teclado.nextShort();
+        float num3 = teclado.nextFloat();
 
-        short media = (short) (num1+num2+num3);
-        System.out.println("La media es: " + media/3);
+        float media = (int) (num1 + num2 + num3);
+        System.out.println("La media es: " + media / 3);
     }
 }
