@@ -8,11 +8,11 @@ public class ej5 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Altura para la piramide: ");
-        int altura = teclado.nextInt();
+        int altura = 5;
 
-        for (int i = 0; i < altura-1; i++) {
+        for (int i = 0; i < altura; i++) {
             for (int j = 0; j < altura*2-1; j++) {
-                if (i+j < altura -1 && j-i < altura -1) {
+                if (i+j >= altura -1 && j-i <= altura -1 ) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
