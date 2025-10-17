@@ -12,7 +12,7 @@ public class ej5 {
 
         for (int i = 0; i < altura-1; i++) {
             for (int j = 0; j < altura*2-1; j++) {
-                if (i+j < altura -1 && j-i < altura -1) {
+                if (i+j < altura -1 && j-i > altura -1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
