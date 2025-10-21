@@ -17,7 +17,7 @@ public class test {
 
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < altura*2-1; j++) {
-                if (i == 0 && j == altura /2 +1) {
+                if (i == 0 && j == altura) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
