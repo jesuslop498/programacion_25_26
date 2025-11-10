@@ -2,7 +2,7 @@ package mm.U3.Tarea1;
 
 public class ej10 {
     public static void main(String[] args) {
-        System.out.println(amigos(220,284));
+        System.out.println(amigos(220 ,284));
     }
 
     public static boolean amigos(int n1, int n2) {
