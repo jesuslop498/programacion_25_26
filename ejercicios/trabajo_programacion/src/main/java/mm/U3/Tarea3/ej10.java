@@ -16,7 +16,7 @@ public class ej10 {
             if (numero % 2 == 0) {
                 tabla[contador] = numero;
                 contador++;
-            } else { // si es impar
+            } else {
                 imparesDesechados++;
             }
         }
