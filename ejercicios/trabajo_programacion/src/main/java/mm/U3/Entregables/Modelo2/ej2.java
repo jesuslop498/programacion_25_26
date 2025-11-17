@@ -15,7 +15,7 @@ public class ej2 {
 
     public static String convierteEnMorse(int n) {
         int num = n;
-        String morse = "";
+        StringBuilder morse = new StringBuilder();
 
         int numeroInvertido = 0;
         while (num != 0) {
@@ -28,39 +28,39 @@ public class ej2 {
             int res = numeroInvertido % 10;
             switch (res) {
                 case 1:
-                    morse += ". _ _ _ _ ";
+                    morse.append(". _ _ _ _ ");
                     break;
                 case 2:
-                    morse += ". . _ _ _ ";
+                    morse.append(". . _ _ _ ");
                     break;
                 case 3:
-                    morse += ". . . _ _ ";
+                    morse.append(". . . _ _ ");
                     break;
                 case 4:
-                    morse += ". . . . _ ";
+                    morse.append(". . . . _ ");
                     break;
                 case 5:
-                    morse += ". . . . . ";
+                    morse.append(". . . . . ");
                     break;
                 case 6:
-                    morse += "_ . . . . ";
+                    morse.append("_ . . . . ");
                     break;
                 case 7:
-                    morse += "_ _ . . . ";
+                    morse.append("_ _ . . . ");
                     break;
                 case 8:
-                    morse += "_ _ _ . . ";
+                    morse.append("_ _ _ . . ");
                     break;
                 case 9:
-                    morse += "_ _ _ _ . ";
+                    morse.append("_ _ _ _ . ");
                     break;
                 case 0:
-                    morse += "_ _ _ _ _ ";
+                    morse.append("_ _ _ _ _ ");
                     break;
             }
             numeroInvertido /= 10;
         }
-        return morse;
+        return morse.toString();
     }
 }
 
