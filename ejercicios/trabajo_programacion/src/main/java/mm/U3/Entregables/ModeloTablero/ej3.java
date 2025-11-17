@@ -3,32 +3,36 @@ package mm.U3.Entregables.ModeloTablero;
 import java.util.Arrays;
 
 public class ej3 {
-    public static int[] filtraCon8(int x[]) {
-        if (x.length == 0) {
-            return x;
-        }
+    public static void main(String[] args) {
+        int [] a = {8, 18, 9, 12, 28};
 
-        Arrays.sort(x);
+        System.out.println(Arrays.toString(filtraCon8(a)));
+    }
 
-        int cont = 1;
+    public static int[] filtraCon8(int[] x) {
 
-        for (int i = 1; i < x.length; i++) {
-            if (x[i] != x[i - 1]) {
+        int[] temp = new int[x.length];
+        int cont = 0;
+
+        for (int num : x) {
+            int aux = num;
+            boolean tiene8 = false;
+
+            while (aux > 0) {
+                if (aux % 10 == 8) {
+                    tiene8 = true;
+                    break;
+                }
+                aux /= 10;
+            }
+
+            if (tiene8) {
+                temp[cont] = num;
                 cont++;
             }
         }
 
-        int[] result = new int[cont];
-        int index = 0;
-
-        result[index++] = x[0];
-
-        for (int i = 1; i < x.length; i++) {
-            if (x[i] != x[i - 1]) {
-                result[index++] = x[i];
-            }
-        }
-        return result;
+        // Ajustamos el tamaño del array de salida
+        return Arrays.copyOf(temp, cont);
     }
 }
-
