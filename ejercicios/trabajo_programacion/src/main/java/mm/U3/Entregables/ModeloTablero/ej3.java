@@ -32,7 +32,6 @@ public class ej3 {
             }
         }
 
-        // Ajustamos el tamaño del array de salida
         return Arrays.copyOf(temp, cont);
     }
 }
