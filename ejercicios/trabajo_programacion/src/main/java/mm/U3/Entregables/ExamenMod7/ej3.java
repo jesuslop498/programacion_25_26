@@ -10,7 +10,7 @@ public class ej3 {
         String [] texto = new String[cadena.length()];
 
         for (int i = 0; i < texto.length; i++) {
-            texto[i] = cadena.valueOf(cadena.charAt(i));
+            texto[i] = String.valueOf(cadena.charAt(i));
         }
 
         for (int i = 0; i < texto.length / 2; i++) {
