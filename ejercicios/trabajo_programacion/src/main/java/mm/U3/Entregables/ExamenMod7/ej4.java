@@ -31,7 +31,7 @@ public class ej4 {
 
 
     public static void main(String[] args) {
-        int num = 185614;
+        int num = 111111111;
 
         System.out.println(convierteEnPalabras(num));
     }
