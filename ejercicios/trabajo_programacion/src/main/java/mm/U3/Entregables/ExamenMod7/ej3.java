@@ -20,7 +20,6 @@ public class ej3 {
             texto[texto.length - 1 - i] = temp;
         }
 
-
         return texto;
 
     }
