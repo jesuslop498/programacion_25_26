@@ -1,6 +1,7 @@
 package mm.U3.Entregables.ExamenMod7;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ej3 {
     public static String[] invertir(String cadena) {
@@ -56,7 +57,10 @@ public class ej3 {
     }
 
     public static void main(String[] args) {
-        String hola = "hola";
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Introduce una palabra: ");
+        String hola = teclado.nextLine();
 
         System.out.println(Arrays.toString(invertir(hola)));
         System.out.println(Arrays.toString(desplazarVocales(hola)));
