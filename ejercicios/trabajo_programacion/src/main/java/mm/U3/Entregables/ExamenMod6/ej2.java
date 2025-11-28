@@ -36,8 +36,8 @@ public class ej2 {
     }
 
     public static void main(String[] args) {
-        int[] v1 = {2, 5, 6, 4};
-        int[] v2 = {1, 3, 4};
+        int[] v1 = {1, 3, 4};
+        int[] v2 = {2, 5, 6, 4};
         int pos = 1;
 
         System.out.println("Vectores fusionados: ");
