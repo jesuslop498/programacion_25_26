@@ -13,7 +13,7 @@ public class ej1 {
 
     public static int[] interseccionVectores(int[] a, int[] b) {
 
-        int[] res = new int[a.length];
+        int[] res = new int[a.length+b.length];
         int cont = 0;
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b.length; j++) {

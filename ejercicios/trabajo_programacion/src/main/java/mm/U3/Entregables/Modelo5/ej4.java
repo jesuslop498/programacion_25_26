@@ -35,8 +35,8 @@ public class ej4 {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-//                int nuevaCol = (j + desplazar) % n;
-//                rotar[i][nuevaCol] = a[i][j];
+                int nuevaCol = (j + desplazar) % n;
+                rotar[i][nuevaCol] = a[i][j];
             }
         }
         return rotar;
