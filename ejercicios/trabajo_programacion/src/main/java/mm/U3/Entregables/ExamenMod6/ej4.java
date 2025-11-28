@@ -25,7 +25,6 @@ public class ej4 {
                 p++;
             }
         }
-
         return res;
     }
 
@@ -47,7 +46,10 @@ public class ej4 {
 
         System.out.print("Introduce una posicion para la nueva fila: ");
         int pos = teclado.nextInt();
-
+        if (pos > tabla.length) {
+            System.out.println("Has introducido una posicion invalida. ");
+            return;
+        }
         System.out.println();
 
         System.out.println("El resultado es: ");
