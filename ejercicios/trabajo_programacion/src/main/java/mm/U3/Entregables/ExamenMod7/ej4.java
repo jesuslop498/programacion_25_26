@@ -1,5 +1,7 @@
 package mm.U3.Entregables.ExamenMod7;
 
+import java.util.Scanner;
+
 public class ej4 {
     public static String convierteEnPalabras(int n) {
         String numero = String.valueOf(n);
@@ -31,7 +33,9 @@ public class ej4 {
 
 
     public static void main(String[] args) {
-        int num = 451687923;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce un numero para descomponerlo: ");
+        int num = teclado.nextInt();
 
         System.out.println(convierteEnPalabras(num));
     }
