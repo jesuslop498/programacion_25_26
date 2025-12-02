@@ -21,7 +21,6 @@ public class ej1 {
         return true;
     }
 
-
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
