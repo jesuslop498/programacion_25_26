@@ -7,7 +7,14 @@ public class ej4 {
     public static void main(String[] args) {
         String frase = "Hola que tal estás hoy martes?";
 
-        System.out.println(Arrays.deepToString(matrizLetras(frase)));
+        char [][] matriz = matrizLetras(frase);
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static char[][] matrizLetras(String frase) {
@@ -33,5 +40,4 @@ public class ej4 {
 
         return matriz;
     }
-
 }
