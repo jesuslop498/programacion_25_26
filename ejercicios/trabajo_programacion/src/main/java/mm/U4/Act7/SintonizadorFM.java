@@ -23,6 +23,8 @@ public class SintonizadorFM {
     }
 
     public void display() {
-        System.out.println("Frecuencia sintonizada: " + frecuencia + " MHz");
+        System.out.println("La frecuencia actual es: " + frecuencia + " MHz");
     }
+
+
 }
