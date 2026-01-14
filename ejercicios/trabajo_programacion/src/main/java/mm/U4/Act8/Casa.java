@@ -16,7 +16,7 @@ public class Casa {
             bombillas.add(new Bombilla());
             estadoPrevioBombillas.add(false);
         }
-        luzGeneralActivada = true;
+        luzGeneralActivada = false;
     }
 
     public void activarLuzGeneral() {
