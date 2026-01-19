@@ -1,0 +1,44 @@
+package mm.U4.Tarea1.Act1;
+
+public class CuentaCorriente {
+    static String nombreBanco = "Banco de España";
+    private double saldo;
+    private int limiteDescubrimiento;
+    private String nombre;
+    private String dni;
+
+    CuentaCorriente(String nombre, String dni) {
+        this.saldo = 0;
+        this.limiteDescubrimiento = -50;
+        this.nombre = nombre;
+        this.dni = dni;
+    }
+
+    void ingresarDinero(double cantidad) {
+        if (cantidad > 0) {
+            saldo += cantidad;
+        }
+    }
+
+    boolean sacarDinero(double dineroASacar) {
+        boolean resultado = false;
+
+        if (dineroASacar <= saldo - limiteDescubrimiento) {
+            System.out.print("Es posible sacar: " + dineroASacar);
+            saldo -= dineroASacar;
+            resultado = true;
+        } else {
+            System.out.print("No es posible sacar el dinero");
+        }
+        return resultado;
+
+    }
+
+    void mostrarInfo() {
+        System.out.println(" El saldo es: " + saldo);
+        System.out.println(" El nombre del titular es: " + nombre);
+        System.out.println(" El DNI del titular es: " + dni);
+        System.out.println(" El nombre del banco es: " + nombreBanco);
+        System.out.println(" El limite del descubrimiento es: " + limiteDescubrimiento);
+    }
+}
