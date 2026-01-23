@@ -28,4 +28,3 @@ public class Ingrediente {
         return nombre + " (" + caloriasPor100g + " cal/100g)";
     }
 }
-
