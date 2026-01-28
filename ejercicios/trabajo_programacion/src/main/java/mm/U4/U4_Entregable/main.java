@@ -1,99 +1,68 @@
 package mm.U4.U4_Entregable;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
+        //Creacion de los capitulos de manera correcta
+        Capitulo c1 = new Capitulo(10, "Malasa", Formato.TEXTO);
+        Capitulo c2 = new Capitulo(13, "Pensar", Formato.INTERACTIVO);
+        Capitulo c3 = new Capitulo(1, "Leer", Formato.ILUSTRADO);
+        Capitulo c4 = new Capitulo(2, "Escribir", Formato.TEXTO);
+        Capitulo c5 = new Capitulo(3, "Soñar", Formato.INTERACTIVO);
+        Capitulo c6 = new Capitulo(4, "Imaginar", Formato.ILUSTRADO);
 
-        // Creamos el festival
-        Festival f1 = new Festival();
+        //Creacion de los libros e implementacion de los capitulos correspondientes
+        Libro l1 = new Libro("Estrella", "Velazquez", 2001);
+        l1.addCapitulo(c1);
+        l1.addCapitulo(c2);
 
-        // Creamos 3 conciertos
-        Concierto c1 = new Concierto("Cocacola", "20 de marzo");
-        Concierto c2 = new Concierto("Cocacola", "21 de marzo");
-        Concierto c3 = new Concierto("Cocacola", "22 de marzo");
+        Libro l2 = new Libro("Oriente", "Cristobal", 2005);
+        l2.addCapitulo(c3);
+        l2.addCapitulo(c4);
 
-        // Los agregamos al festival
-        f1.agregarConcierto(c1);
-        f1.agregarConcierto(c2);
-        f1.agregarConcierto(c3);
+        Libro l3 = new Libro("Paisaje", "Paco", 2009);
+        l3.addCapitulo(c5);
+        l3.addCapitulo(c6);
 
-        // Escenarios
-        Escenario c1e1 = new Escenario("Brillo", "Este", 2500);
-        Escenario c1e2 = new Escenario("Oscuridad", "Oeste", 2500);
-        Escenario c1e3 = new Escenario("Luz", "Sur", 2500);
+        //Creacion de la biblioteca e implementeacion de los libros
+        Biblioteca b1 = new Biblioteca("Sevillana");
+        b1.addLibros(l1);
+        b1.addLibros(l2);
+        b1.addLibros(l3);
 
-        Escenario c2e1 = new Escenario("Brillo", "Este", 2500);
-        Escenario c2e2 = new Escenario("Oscuridad", "Oeste", 2500);
-        Escenario c2e3 = new Escenario("Luz", "Sur", 2500);
+        //Mostramos informacion de todas las clases
+        System.out.println();
+        b1.mostrar_informacion();
 
-        Escenario c3e1 = new Escenario("Brillo", "Este", 2500);
-        Escenario c3e2 = new Escenario("Oscuridad", "Oeste", 2500);
-        Escenario c3e3 = new Escenario("Luz", "Sur", 2500);
+        System.out.println();
+        l1.mostrar_informacion();
 
-        // Agregamos escenarios a conciertos
-        c1.agregarEscenario(c1e1);
-        c1.agregarEscenario(c1e2);
-        c1.agregarEscenario(c1e3);
+        System.out.println();
+        c1.mostrar_informacion();
 
-        c2.agregarEscenario(c2e1);
-        c2.agregarEscenario(c2e2);
-        c2.agregarEscenario(c2e3);
+        //PRUEBAS
+        System.out.println();
 
-        c3.agregarEscenario(c3e1);
-        c3.agregarEscenario(c3e2);
-        c3.agregarEscenario(c3e3);
+        //Añadir capitulo con mismo numero que otro capitulo en un libro
+        Capitulo c10 = new Capitulo(10, "Error", Formato.TEXTO);
+        l1.addCapitulo(c10);
+        System.out.println();
 
-        // Cantantes
-        Cantante serko = new Cantante("Pedro", "Serko", 25, "Terrassa");
-        Cantante munin = new Cantante("Federico", "Munin", 27, "Segovia");
+        //Eliminar capitulo de un libro y mostrar capitulos
+        l1.eliminarCapitulo(10);
+        l1.mostrar_capitulos();
+        System.out.println();
 
-        // Añadimos cantantes a TODOS los escenarios
-        Escenario[] escenarios = {
-                c1e1, c1e2, c1e3,
-                c2e1, c2e2, c2e3,
-                c3e1, c3e2, c3e3
-        };
+        //Mostrar libros de biblioteca
+        b1.mostrar_libros();
+        System.out.println();
 
-        for (Escenario e : escenarios) {
-            e.agregarCantante(serko);
-            e.agregarCantante(munin);
-        }
+        //Mostrar detalles del capitulo, es equivalente al mostrar informacion del mismo
+        c4.mostrar_informacion();
+        System.out.println();
 
-        // Canciones (representamos TODOS los géneros)
-        Cancion s1 = new Cancion("Gol", 2.13, genero.TRAP, serko);
-        Cancion s2 = new Cancion("Mareas", 2.47, genero.EMORAP, serko);
-
-        Cancion m1 = new Cancion("Noche", 3.01, genero.NEOPERREO, munin);
-        Cancion m2 = new Cancion("Sombras", 2.55, genero.TRAP, munin);
-
-        // Añadimos canciones a cantantes
-        serko.insertarCancion(s1);
-        serko.insertarCancion(s2);
-
-        munin.insertarCancion(m1);
-        munin.insertarCancion(m2);
-
-        // PRUEBAS POR CONSOLA
-        System.out.println("===== FESTIVAL =====");
-        f1.mostrar_informacion();
-
-        System.out.println("===== CARTELERA CONCIERTO 1 =====");
-        c1.mostrarCartelera();
-
-        System.out.println("===== CANCIONES DE SERKO =====");
-        serko.mostrarListaCanciones();
-
-        System.out.println("===== DATOS ESCENARIO =====");
-        c1e1.datosEscenario();
-
-        c1.programarConcierto("25 de marzo");
-
-        System.out.println("===== ELIMINAMOS UNA CANCIÓN DE SERKO =====");
-        serko.eliminarCancionPorTitulo("Gol");
-        serko.mostrarListaCanciones();
-
-        System.out.println("===== INFORMACIÓN COMPLETA DEL FESTIVAL =====");
-        f1.mostrar_informacion();
-
-
+        //Crearemos otra biblioteca para comprobar si el responsable sigue siendo el mismo
+        Biblioteca b2 = new Biblioteca("Marsella");
+        b2.addLibros(l3);
+        b2.mostrar_informacion();
     }
 }
