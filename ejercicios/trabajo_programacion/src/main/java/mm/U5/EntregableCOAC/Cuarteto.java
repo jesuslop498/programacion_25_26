@@ -1,0 +1,30 @@
+package mm.U5.EntregableCOAC;
+
+public class Cuarteto extends AgrupacionOficial implements Callejera {
+
+    private int numMiembros;
+
+    public Cuarteto(String nombre, String autor, String autorMusica,
+                    String autorLetras, String tipo, int puntos,
+                    int numMiembros) {
+
+        super(nombre, autor, autorMusica, autorLetras, tipo, puntos);
+        this.numMiembros = numMiembros;
+    }
+
+    @Override
+    public void cantar_la_presentacion() {
+        System.out.println("Cantando la presentación del Cuarteto con nombre " + nombre);
+    }
+
+    @Override
+    public void caminito_del_falla() {
+        System.out.println("El cuarteto " + nombre + " va caminito del falla");
+    }
+
+    @Override
+    public void amo_a_escucha() {
+        System.out.println("Amo a escucha el Cuarteto " + nombre);
+    }
+}
+
