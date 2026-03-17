@@ -33,4 +33,3 @@ public class ej13 {
         return resultado;
     }
 }
-
