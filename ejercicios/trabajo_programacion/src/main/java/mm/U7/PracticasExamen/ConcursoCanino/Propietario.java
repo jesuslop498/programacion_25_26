@@ -1,30 +1,27 @@
 package mm.U7.PracticasExamen.ConcursoCanino;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Propietario implements Serializable {
-    private String nombre;
-    private String apellidos;
-    private int numSocio;
-    private String pais;
+	private String nombre;
+	private String apellidos;
+	private long numero_socio;
+	private String pais;
 
-    public Propietario(String nombre, String apellidos, int numSocio, String pais) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.numSocio = numSocio;
-        this.pais = pais;
-    }
+	public long getNumero_socio() {
+		return numero_socio;
+	}
 
-    public int getNumSocio() {
-        return numSocio;
-    }
+	@Override
+	public boolean equals(Object o) {
+		if (o == null || getClass() != o.getClass()) return false;
+		Propietario that = (Propietario) o;
+		return numero_socio == that.numero_socio;
+	}
 
-    public String getNombreCompleto() {
-        return nombre + " " + apellidos;
-    }
-
-    @Override
-    public String toString() {
-        return nombre + " " + apellidos + " (" + pais + ") - Socio: " + numSocio;
-    }
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(numero_socio);
+	}
 }
