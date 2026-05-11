@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro categoria="Novela">
+        <titulo>Don Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <anio>1605</anio>
+    </libro>
+
+    <libro categoria="Ciencia">
+        <titulo>Breve historia del tiempo</titulo>
+        <autor>Stephen Hawking</autor>
+        <anio>1988</anio>
+    </libro>
+
+    <libro categoria="Fantasia">
+        <titulo>El Hobbit</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <anio>1937</anio>
+    </libro>
+
+    <libro categoria="Drama">
+        <titulo>La Casa de Bernarda Alba</titulo>
+        <autor>Federico Garcia Lorca</autor>
+        <anio>1936</anio>
+    </libro>
+
+    <libro categoria="Terror">
+        <titulo>It</titulo>
+        <autor>Stephen King</autor>
+        <anio>1986</anio>
+    </libro>
+</biblioteca>
