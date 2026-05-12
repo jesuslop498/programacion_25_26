@@ -12,7 +12,7 @@ public class RecorridoSax {
 
         try {
 
-            File archivo = new File("personasXML.xml");
+            File archivo = new File("C:\\Users\\1DAM-jlophid2005\\repos\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1\\personasXML.xml");
 
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
