@@ -1,63 +1,72 @@
 package mm.U8.Entregable_1;
 
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
+import java.io.File;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.Attributes;
+import org.xml.sax.helpers.DefaultHandler;
 
 public class RecorridoSax {
 
     public static void main(String[] args) {
+
         try {
+
+            File archivo = new File("personasXML.xml");
+
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
 
-            DefaultHandler handler = new DefaultHandler() {
+            DefaultHandler manejador = new DefaultHandler() {
 
-                boolean titulo = false;
-                boolean autor = false;
-                boolean anio = false;
+                boolean bNombre = false;
+                boolean bApellido = false;
+                boolean bDepartamento = false;
 
-                public void startElement(String uri, String localName, String qName, Attributes attributes)
-                        throws SAXException {
+                public void startElement(String uri, String localName,
+                                         String qName, Attributes attributes) {
 
                     System.out.println("Inicio etiqueta: " + qName);
 
-                    if (qName.equalsIgnoreCase("titulo")) titulo = true;
-                    if (qName.equalsIgnoreCase("autor")) autor = true;
-                    if (qName.equalsIgnoreCase("anio")) anio = true;
+                    if (qName.equalsIgnoreCase("nombre")) {
+                        bNombre = true;
+                    }
 
-                    if (attributes.getLength() > 0) {
-                        for (int i = 0; i < attributes.getLength(); i++) {
-                            System.out.println("Atributo -> " + attributes.getQName(i) + ": " + attributes.getValue(i));
-                        }
+                    if (qName.equalsIgnoreCase("apellido")) {
+                        bApellido = true;
+                    }
+
+                    if (qName.equalsIgnoreCase("departamento")) {
+                        bDepartamento = true;
                     }
                 }
 
-                public void characters(char ch[], int start, int length) throws SAXException {
-                    String contenido = new String(ch, start, length).trim();
+                public void characters(char ch[], int start, int length) {
 
-                    if (!contenido.isEmpty()) {
-                        if (titulo) {
-                            System.out.println("Titulo: " + contenido);
-                            titulo = false;
-                        } else if (autor) {
-                            System.out.println("Autor: " + contenido);
-                            autor = false;
-                        } else if (anio) {
-                            System.out.println("Año: " + contenido);
-                            anio = false;
-                        }
+                    if (bNombre) {
+                        System.out.println("Nombre: " + new String(ch, start, length));
+                        bNombre = false;
+                    }
+
+                    if (bApellido) {
+                        System.out.println("Apellido: " + new String(ch, start, length));
+                        bApellido = false;
+                    }
+
+                    if (bDepartamento) {
+                        System.out.println("Departamento: " + new String(ch, start, length));
+                        bDepartamento = false;
                     }
                 }
 
-                public void endElement(String uri, String localName, String qName) throws SAXException {
+                public void endElement(String uri, String localName,
+                                       String qName) {
+
                     System.out.println("Fin etiqueta: " + qName);
                 }
             };
 
-            saxParser.parse("C:\\Users\\1DAM-jlophid2005\\repos\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1", handler);
+            saxParser.parse(archivo, manejador);
 
         } catch (Exception e) {
             e.printStackTrace();

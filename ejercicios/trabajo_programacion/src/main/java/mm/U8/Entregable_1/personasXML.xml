@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empresa>
+
+    <!-- Lista de empleados -->
+
+    <empleado id="1">
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+        <departamento>Informática</departamento>
+    </empleado>
+
+    <empleado id="2">
+        <nombre>María</nombre>
+        <apellido>López</apellido>
+        <departamento>Recursos Humanos</departamento>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Carlos</nombre>
+        <apellido>Gómez</apellido>
+        <departamento>Contabilidad</departamento>
+    </empleado>
+
+    <empleado id="4">
+        <nombre>Lucía</nombre>
+        <apellido>Martín</apellido>
+        <departamento>Marketing</departamento>
+    </empleado>
+
+    <empleado id="5">
+        <nombre>Pedro</nombre>
+        <apellido>Sánchez</apellido>
+        <departamento>Ventas</departamento>
+    </empleado>
+
+</empresa>
