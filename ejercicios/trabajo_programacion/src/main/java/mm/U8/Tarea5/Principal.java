@@ -25,7 +25,6 @@ public class Principal {
                 }},
                 "FC Barcelona"));
 
-        // Mostrar JSON manual
         System.out.println("JSON generado:\n");
 
         System.out.println("[");
@@ -40,7 +39,6 @@ public class Principal {
 
         System.out.println("\n]");
 
-        // Obtener demarcaciones de Ramos
         ArrayList<String> demarcacionesRamos = new ArrayList<>();
 
         for (Futbolista f : seleccion) {
@@ -49,7 +47,6 @@ public class Principal {
                 break;
             }
         }
-
         System.out.println("\nDemarcaciones de Ramos:");
         System.out.println(demarcacionesRamos);
     }
