@@ -13,21 +13,24 @@ public class RecorridoDOM {
 
         try {
 
-            File archivo = new File("C:\\Users\\1DAM-jlophid2005\\repos\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1\\personasXML.xml");
+            File archivo = new File("C:\\Users\\Jesus Lopez\\IdeaProjects\\programacion_25_26\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1\\personasXML.xml");
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            doc = builder.parse(archivo);
 
+            doc = builder.parse(archivo);
             doc.getDocumentElement().normalize();
 
             numNodosHijos();
+
             System.out.println("-------------------");
 
             mostrarXMLDom();
+
             System.out.println("-------------------");
 
             mostrarContenidoEtiqueta("nombre");
+
             System.out.println("-------------------");
 
             mostrarContenidoEtiqueta("telefono");
@@ -66,6 +69,7 @@ public class RecorridoDOM {
 
                 default:
                     System.out.println("Otro tipo");
+                    break;
             }
         }
     }
@@ -109,6 +113,7 @@ public class RecorridoDOM {
         NodeList lista = doc.getElementsByTagName(s);
 
         if (lista.getLength() == 0) {
+
             System.out.println("No existe ninguna etiqueta llamada: " + s);
             return;
         }

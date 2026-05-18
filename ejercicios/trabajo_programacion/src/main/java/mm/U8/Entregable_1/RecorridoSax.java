@@ -12,7 +12,7 @@ public class RecorridoSax {
 
         try {
 
-            File archivo = new File("C:\\Users\\1DAM-jlophid2005\\repos\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1\\personasXML.xml");
+            File archivo = new File("C:\\Users\\Jesus Lopez\\IdeaProjects\\programacion_25_26\\ejercicios\\trabajo_programacion\\src\\main\\java\\mm\\U8\\Entregable_1\\personasXML.xml");
 
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
@@ -23,8 +23,9 @@ public class RecorridoSax {
                 boolean bApellido = false;
                 boolean bDepartamento = false;
 
+                @Override
                 public void startElement(String uri, String localName,
-                                         String qName, Attributes attributes) {
+                        String qName, Attributes attributes) {
 
                     System.out.println("Inicio etiqueta: " + qName);
 
@@ -41,26 +42,37 @@ public class RecorridoSax {
                     }
                 }
 
+                @Override
                 public void characters(char ch[], int start, int length) {
 
                     if (bNombre) {
-                        System.out.println("Nombre: " + new String(ch, start, length));
+
+                        System.out.println("Nombre: "
+                                + new String(ch, start, length));
+
                         bNombre = false;
                     }
 
                     if (bApellido) {
-                        System.out.println("Apellido: " + new String(ch, start, length));
+
+                        System.out.println("Apellido: "
+                                + new String(ch, start, length));
+
                         bApellido = false;
                     }
 
                     if (bDepartamento) {
-                        System.out.println("Departamento: " + new String(ch, start, length));
+
+                        System.out.println("Departamento: "
+                                + new String(ch, start, length));
+
                         bDepartamento = false;
                     }
                 }
 
+                @Override
                 public void endElement(String uri, String localName,
-                                       String qName) {
+                        String qName) {
 
                     System.out.println("Fin etiqueta: " + qName);
                 }
