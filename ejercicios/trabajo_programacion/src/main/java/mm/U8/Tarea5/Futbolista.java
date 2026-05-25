@@ -34,7 +34,6 @@ public class Futbolista {
         return equipo;
     }
 
-
     @Override
     public String toString() {
         return "{"
